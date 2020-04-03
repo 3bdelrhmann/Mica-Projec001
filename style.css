@@ -1,0 +1,440 @@
+*{
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+.card-body p {
+    line-height: 2.0;
+}
+.card .no-gutter .text-center img{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    padding: 9px;    
+}
+.box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: #e8e8e8;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.box .b {
+  border-radius: 50%;
+  border-left: 4px solid;
+  border-right: 4px solid;
+  border-top: 4px solid transparent !important;
+  border-bottom: 4px solid transparent !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ro 2s infinite;
+}
+
+.box .b1 {
+  border-color: #4A69BD;
+  width: 120px;
+  height: 120px;
+}
+
+.box .b2 {
+  border-color: #F6B93B;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0.2s;
+}
+
+.box .b3 {
+  border-color: #2ECC71;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0.4s;
+}
+
+.box .b4 {
+  border-color: #34495E;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0.6s;
+}
+
+@keyframes ro {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+header.topHeader{
+	background-color: #fff
+}
+header.topHeader {
+	background-color: #f7f7f7;
+	border-bottom: 3px solid #ddd;
+}
+header.topHeader .logo{
+	overflow: hidden;
+}
+header.topHeader .logo img{
+	width: 120px
+}
+.button_container {
+    position: fixed;
+    top: 43px;
+    right: 30px;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+          transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: #293179;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(15,36,70,.9);
+  top: 0;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  z-index: 9
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  text-align: center;
+}
+.overlay.open .logo img{
+  width: 90px;
+  padding-top: 16px;
+}
+.overlay.open li {
+  -webkit-animation: fadeInRight .5s ease forwards;
+          animation: fadeInRight .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: .50s;
+          animation-delay: .50s;
+}
+.overlay nav {
+    padding: 150px 0;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+  padding: 25px 0;
+  font-weight: bold;
+  font-style: 23px;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+/* */
+.SlideImg{
+    background: linear-gradient(0deg,rgba(15, 36, 70, 0.66),rgba(15, 36, 70, 0.66)),url(./img/slider.jpeg);
+    overflow: hidden;
+    background-size-x: contain;
+    background-repeat: no-repeat;
+}
+.SlideImg .content{
+  padding: 150px 0;
+}
+.SlideImg .content h3{
+  color: #fff
+}
+.SlideImg .content p{
+    color: #fff;
+    border-right: 2px solid #293179;
+    padding-right: 8px;
+    margin-right: 13px;
+    font-size: 17px;
+    text-shadow: 3px 3px 1px #293179;
+    line-height: 2;
+}
+.SlideImg .content p a{
+    display: inline-block;
+    background: #293179;
+    padding: 7px 15px;
+    line-height: normal;
+    box-shadow: 4px 4px 12px #00000096;
+    text-shadow: none;
+    margin-top: 10px;
+    color: #fff;
+}
+.M-counter{
+  background-color: #2196f3;
+  color: #f4f4f4f4;
+  overflow: hidden;
+}
+.M-counter > div{
+  padding: 20px 0;
+}
+.M-counter .item i{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.M-counter .item h3{
+  color: #fff
+}
+/* */
+h2,h3,h1{
+  color: rgb(15, 36, 70);
+}
+
+/*activities*/
+.activities-section{
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.activities-section a{
+    transition: width 2s;
+}
+  .activities .activity{
+    text-align: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .activities  a:hover h3{
+    text-decoration: underline;
+  }
+  .activities  a:hover .activity{
+    background-size: 150% 340px;
+  }
+  .activities .activity h3{
+    color: #fff;
+    padding-top: 208px;
+  }
+
+.nav-pills li a{
+  display: inline-block;
+  background-color: rgb(15, 36, 70);
+  padding: 8px;
+  color: #fff
+}
+.activities-section .readmore{
+  overflow: hidden;
+}
+.activities-section .readmore a{
+    transition: all .5s cubic-bezier(0.25, 0.1, 0.11, 0.96);
+    background: #002e66;
+    color: #d0d0d0;
+    padding: 19px 0;
+    display: block;
+    border: 2px solid #002e66;
+}
+.activities-section .readmore a:hover{
+    background-color: #fff;
+    color: #002e66;
+}
+/*activities*/
+
+/*Targets Mostqbal Watan*/
+section.targets{
+  margin: 30px 0 ;
+  text-align: right;
+  background: #ffffff;
+  padding: 7px 0;
+  box-shadow: 7px 8px 29px 0px #33333333;
+  overflow: hidden;
+
+}
+section header h1:after{
+  content: '';
+  position: absolute;
+  width: 200px;
+  display: block;
+  right: 21%;
+  height: 5px;
+  background-color: #002e66;
+  border-radius: 20px 0px;
+  margin-top: 4px;
+}
+.targets .our-targets{
+  margin-top: 19px;
+  overflow: hidden;
+}
+.targets .our-targets > div{
+  padding: 10px 5px
+}
+.targets .our-targets .Target-right{
+  background: #1565c0
+;
+  float: right;
+  display: block;
+  border-left:4px solid #e8e8e8;
+  border-right: 4px solid #e8e8e8;
+}
+.targets .our-targets .Target-left{
+  background: #1565c0  ;
+  float: left;
+  display: block;
+  border:4px solid #e8e8e8;
+}
+.targets .our-targets h3{
+  color: #fff;
+}
+.targets .our-targets article{
+  color: #ddd;
+  padding-right: 4px;
+}
+/*Targets Mostqbal Watan*/
+
+/*Mostaqbal watan*/
+.party .header {
+  padding: 25px 0;
+}
+.party .leaders .Thfirst{
+  margin-bottom: 25px
+}
+.party .about-mostqbal h3{
+  color: #fff
+}
+.party .about-mostqbal p{
+  border-right: 5px solid rgb(15, 36, 70);
+  padding-right: 8px;
+  margin-right: 14px;
+  line-height: 2;
+}
+.party .leaders{
+  overflow: hidden;
+
+  
+
+}
+
+.party .leaders .Thfirst img{
+    height: 250px;
+    width: 250px;
+    box-shadow: 3px 3px 14px #ddd;
+    margin-bottom: 8px;
+}
+.party .leaders  img{
+    border-radius: 50%;
+}
+.party .leaders .Thsecond{
+  margin-bottom: 25px;
+}
+.party .leaders .Thsecond img{
+  width: 200px;
+}
+.party .leaders .Ththirt,.party .leaders .Thsecond{
+  overflow: hidden;
+}
+.party .leaders .Ththirt img{
+  width: 180px;
+}
+
+/*Mostaqbal watan*/
+iframe{
+  width: 100%;
+  height: 1000px;
+  border:3px solid #2196f3;
+  box-shadow: 3px 3px 9px #000;
+}
