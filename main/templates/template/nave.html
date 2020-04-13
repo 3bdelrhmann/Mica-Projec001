@@ -1,0 +1,35 @@
+{% load static %}
+<div class="box" id="box">
+    <div class="b b1"></div>
+    <div class="b b2"></div>
+    <div class="b b3"></div>
+    <div class="b b4"></div>
+</div>
+<header class="topHeader">
+    <div class="container">
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+        <div class="col-sm-12 logo text-center pt-1 pb-1">
+            <img src="{% static 'images/logo.png' %}">
+        </div>
+    </div>
+</header>
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul class="col-sm-3">
+            <li><a href="./index.html">الصفحة الرئيسية</a></li>
+            <li><a href="./symptoms.html">الاعراض</a></li>
+            <li><a href="./index.html#protection">طرق الوقاية</a></li>
+            <li><a href="./PlacesOfLabs1.html">اماكن التحاليل</a></li>
+        </ul>
+        <ul class="col-sm-3">
+            <li><a href="./volunteerDoctors.html">إستشير طبيب</a></li>
+            <li><a href="./volunteerDoctorForm.html">تطوع لفريق الاطباء</a></li>
+            <li><a href="./donations.html">تبرع الان</a></li>
+            <li><a href="./index.html#party1">اعلي الدول اصابه </a></li>
+        </ul>
+    </nav>
+</div>

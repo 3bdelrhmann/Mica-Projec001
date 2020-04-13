@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    {% include 'template/header.html' %}
+</head>
+
+<body>
+    {% include 'template/nave.html' %}
+
+    {% block content%}
+
+    {% endblock %}
+
+    {% include 'template/footer.html' %}
+</body>
+
+</html>
