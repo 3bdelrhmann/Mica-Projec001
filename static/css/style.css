@@ -238,12 +238,11 @@ header.topHeader .logo img{
 }
 /* */
 .M-counter{
-  background-color: #2196f3;
-  color: #f4f4f4f4;
+  background-color: #a7d8ff;
   overflow: hidden;
 }
-.M-counter > div{
-  padding: 20px 0;
+.M-counter .last_update{
+  font-size: 13px;
 }
 .M-counter .item i{
   font-size: 30px;
@@ -308,7 +307,6 @@ section.targets{
   text-align: right;
   background: #ffffff;
   padding: 7px 0;
-  box-shadow: 7px 8px 29px 0px #33333333;
   overflow: hidden;
 
 }
@@ -397,11 +395,22 @@ section header h1:after{
 .party .leaders .Ththirt img{
   width: 180px;
 }
+footer .social  a{
+  font-size: xx-large;
+}
+.width-auto {
+    width: auto;
+}
 
-/*Mostaqbal watan*/
-iframe{
-  width: 100%;
-  height: 1000px;
-  border:3px solid #2196f3;
-  box-shadow: 3px 3px 9px #000;
+.text-lg {
+    font-size: 2rem;
+}
+
+.carousel-indicators li {
+    border: none;
+    background: #ccc;
+}
+
+.carousel-indicators li.active {
+    background: #28a745;
 }

@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from .models import EmergencyPhone
 
-# Create your views here.
+
+def emergency_numbers(request):
+    queryset = EmergencyPhone.objects.all()
+    context = {
+        'numbers': queryset,
+    }
+    return render(request, 'emergencyPhones_app/numbers.html', context)

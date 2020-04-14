@@ -1,0 +1,64 @@
+{% extends 'template/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="container">
+            <header class="col-sm-12 pb-3 ">
+                <h3 class="text-center mt-5"><b>التطوع لفريق الأطباء</b></h3>
+                  
+            </header>
+            <div class="card mt-5 d-flex justify-content-center border-0">
+                <div class="row no-gutters">
+                  <div class="col-md-4 d-flex justify-content-center" style='overflow:hidden;'>
+                    <img class="rounded  mt-3 mb-3 mr-3 ml-3" src="{% static 'images/doctor.jpg' %}" width="450px">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                        <form class="mt-5" method='POST'>
+                        
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    {% comment %} <input type="text" class="form-control" id="docName" placeholder="الاسم" /> {% endcomment %}
+                                    {{form.name}}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="docPhoneNum" placeholder="رقم التليفون" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 text-right">
+                                    <label><b>التخصص</b></label>
+                                    {{form.specialist}}
+                                </div>
+                            </div>
+                            <div class='form-row text-right'>
+                                <label><b>مواعيد تلقي الإستشارات</b></label>  
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{form.from_time}}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{form.from_per}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{form.to_time}}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{form.to_per}}
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ">
+                                <input type="submit" class="col-sm-12 btn btn-primary" value="تسجيل" />
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+{% endblock %}

@@ -1,101 +1,103 @@
 {% load static %}
-
-<footer style="background-color: #2196F3; bottom: 0;">
+<footer class="bg-white">
+    <header style="background-color: #3b325f;" class='text-white pt-2 pb-2 text-center '>
+        <div class="container">
+            <h6 class="m-0"><i style="font-size:small;" class="ml-2 fas fa-arrow-up"></i> للأعلى</h6>
+        </div>
+    </header>
     <div class="container">
         <div class="row">
-            <div class="container">
-                <div class="row mt-3 text-center">
-                    <div class="col-md-4 col-sm-12 mt-2">
-                        <img src="img/logo.png" width="120px">
-                    </div>
-                    <div class="col-md-4 col-sm-12 mt-2">
-                        <form action="#" method="POST" class="text-center">
-                            <p style="color: #FFF;">هل انت جديد معنا ؟</p>
-                            <p style="color: #FFF;">اشترك في نشرتنا الاخبارية لتحصل علي احدث الاخبار</p>
-                            <input type="email" placeholder="ادخل البريد الالكتروني"
-                                style="border-radius: 15px; border-style: none; height: 2rem;" name="email">
-                            <input type="submit" value="اشتراك"
-                                style="border-style: none; border-radius: 15px; background-color: #FFF; height: 2rem;">
-                        </form>
-                    </div>
-                    <div class="col-md-4 col-sm-12 mt-2">
-                        <button
-                            style="background-color: transparent; border: solid 2px #FFF; color: #FFF; margin-top: 10%;">
-                            <i class="fas fa-arrow-up"></i>
-                            <br>
-                            للاعلي
-                        </button>
+            <div class="col-sm-4 col-12 bg-white border-left ">
+                <div class="img text-center">
+                    <img class="mt-3 mb-3" src="{%static 'images/logo.png' %}" alt="Mica-Logo" width="100">
+                </div>
+                <p class="text-right">
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                    الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوري
+                </p>
+                <hr>
+                <div class="text-right">
+                    <h6><b>تابعنا على</b></h6>
+                </div>
+                <div class="text-center social mt-3 mb-3">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-7 bg-white">
+                <div class="text-right mt-3 mb-3">
+                    <h6><b>خريطة الموقع</b></h6>
+                    <div class="row mr-5 mt-4">
+                        <ul class="col-sm-4 col-12 ">
+                            <a href="{% url 'home:main' %}">
+                                <li>الصفحة الرئيسية</li>
+                            </a>
+                            <a href="{% url 'donation:organization' %}">
+                                <li>دعم المؤسسات الخيرية</li>
+                            </a>
+                            <a href="{% url 'donation:peoples' %]">
+                                <li>دعم العمالة اليومية</li>
+                            </a>
+                            <a href="{% url 'doctors:volteneer' %}">
+                                <li>التطوع لفريق الأطباء</li>
+                            </a>
+                            <a href="{% url 'doctors:all' %}">
+                                <li>إستشير طبيب</li>
+                            </a>
+                            <a href="{% url 'labs:all' %}">
+                                <li>اماكن التحليل</li>
+                            </a>
+                        </ul>
+                        <ul class="col-sm-4 col-12">
+                            <a href="{% url 'main:symptoms' %}">
+                                <li>اعراض الفيروس</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                        </ul>
+                        <ul class="col-sm-4 col-12">
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                            <a href="#">
+                                <li>لوريم ايبسوم</li>
+                            </a>
+                        </ul>
+
                     </div>
                 </div>
             </div>
         </div>
-        <hr width="100%">
-        <div class="row text-center" style="color: #FFF;">
-            <div class="col-md-4 col-sm-12 mt-2">
-                <h5>محتوي البتاعة</h5>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-12 mt-2">
-                <h5>محتوي البتاعة</h5>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-                <a href="#" style="color: #FFF;">
-                    <p>محتوي البتاعة</p>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-12 mt-2">
-                <h5>ابق علي تواصل</h5>
-                <div class="row text-center">
-                    <div class="col">
-                        <a href="https://www.facebook.com/micaegypt/">
-                            <i class="fab fa-facebook-square" style="font-size: 3rem; color: #FFF;"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.facebook.com/micaegypt/">
-                            <i class="fab fa-facebook-square" style="font-size: 3rem; color: #FFF;"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.facebook.com/micaegypt/">
-                            <i class="fab fa-facebook-square" style="font-size: 3rem; color: #FFF;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="background-color: transparent;">
-        <section style="color: #FFF;">
-            Powered by MICA students (Ahmed Ramsey, Shamy Yousef, Abdelrhman Mohamed)
-        </section>
     </div>
 </footer>
 <script src="{% static '/js/jquery.min.js' %}"></script>
 <script src="{% static '/js/numscroller-1.0.js' %}"></script>
-<script src="{% static '/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.bundle.js' %}"></script>
+{% comment %} <script src="{% static '/js/bootstrap/js/bootstrap.min.js' %}"></script> {% endcomment %}
 <script src="{% static '/js/script.js' %}"></script>

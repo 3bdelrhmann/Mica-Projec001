@@ -1,0 +1,72 @@
+{% extends 'template/base.html' %}
+{% block content %}
+<div class="container">
+  <header class="col-sm-12 pb-3">
+    <h5 class="text-right mt-5"><b>الاطباء المتطوعين</b></h5>
+    <p class="float-right mb-0">لتلقي الإستشارات من العامة</p>
+  </header>
+  <div class="jumbotron border rounded shadow mt-5 pb-5 col-sm-12" style="overflow: scroll;" style='width:800px; '>
+    <table class="table" style='width:100%;%'>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="text-right">اسم الطبيب</th>
+          <th scope="col" class="text-right">التخصص</th>
+          <th scope="col" class="text-right">رقم الهاتف</th>
+          <th scope="col" class="text-right">متاح</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for doc in doctors %}
+        <tr>
+          <th scope="row" class="text-right">{{doc.name}}</th>
+          <td class="text-right">{{doc.specialist.name}}</td>
+          <td class="text-right"> {{doc.mobile_num}}</td>
+          <td class="text-right">من {{doc.from_time}} {{doc.from_per}} إلي {{doc.to_time}} {{doc.to_per}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation example" class="mt-5">
+      <ul class="pagination justify-content-center m-0">
+
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">السابق</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">السابق</span>
+        </li>
+
+        {% endif %}
+        {% for i in paginator.page_range %}
+        {% if page_obj.number == i %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{i}}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{i}}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}">التالي</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">التالي</span>
+        </li>
+
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

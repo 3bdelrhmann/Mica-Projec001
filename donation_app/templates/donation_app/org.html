@@ -1,0 +1,17 @@
+{% extends 'template/base.html' %}
+{% block content %}
+        <div class="container justify-content-center">
+            <header class="col-sm-12 pb-3 ">
+                <h3 class="text-center mt-5"><b>التبرع للمؤسسات الخيرية</b></h3>
+            </header>
+            <div class="row mt-5 mb-5">
+                {% for org in orgs %}
+                <div class="col-6 mt-5 text-center">
+                    <a target="blank" href="{{ org.url }}">
+                        <img src="{{ org.logo.url }}" width='250px'>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}

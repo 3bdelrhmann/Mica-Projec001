@@ -1,0 +1,16 @@
+{% extends 'template/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for obj in numbers %}
+        <div class="card m-3" style="width: 18rem;">
+            <img src="{{obj.logo.url}}" class="card-img-top" alt="{{obj.name}}">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{obj.name}}</h5>
+                <h6 class="card-title">{{obj.phone}}</h6>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

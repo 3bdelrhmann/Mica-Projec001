@@ -1,0 +1,28 @@
+{% extends 'template/base.html' %}
+{% block content %}
+<div class="container">
+    <header class="col-sm-12 pb-3 ">
+        <h5 class="text-center mt-5"><b>التبرع للعمالة اليومية</b></h5>
+    </header>
+
+    <table class="table table-striped text-right">
+        <thead>
+            <tr>
+                <th scope="col">الأسم</th>
+                <th scope="col">رقم الهاتف</th>
+                <th scope="col">المحافظة</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pepl in peoples %}
+            <tr>
+                <td>{{pepl.name}}</td>
+                <td>{{pepl.phone_number}}</td>
+                <td>{{pepl.city.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
