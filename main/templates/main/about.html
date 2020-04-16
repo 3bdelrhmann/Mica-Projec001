@@ -1,6 +1,5 @@
 {% extends 'template/base.html' %}
 {% load static %}
-
 {% block content %}
 <div class="container mt-5 overflow-hidden">
     <section class="about-us text-center mt-5">
@@ -49,7 +48,7 @@
             <div class="row no-gutter mr-auto ml-auto">
                 <div class='col-sm-4 overflow-hidden'>
                     <header>
-                        <img src="https://via.placeholder.com/300" class='img-thumbnail ' alt="">
+                        <img src="{% static '/images/team/3bdelrhmann.png' %}" class='img-thumbnail ' alt="">
                     </header>
                     <div class="body text-center text-muted mt-3">
                         <p class="m-0"><b>عبدالرحمن فرحات</b></p>
@@ -63,11 +62,10 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div class='col-sm-4 overflow-hidden'>
                     <header>
-                        <img src="https://via.placeholder.com/300" class='img-thumbnail ' alt="">
+                        <img src="{% static '/images/team/shamy.png' %}" class='img-thumbnail ' alt="">
                     </header>
                     <div class="body text-center text-muted mt-3">
                         <p class="m-0"><b>شامي محمد</b></p>
@@ -84,7 +82,7 @@
                 </div>
                 <div class='col-sm-4 overflow-hidden'>
                     <header>
-                        <img src="https://via.placeholder.com/300" class='img-thumbnail ' alt="">
+                        <img src="{% static '/images/team/ramzy.png' %}" class='img-thumbnail ' alt="">
                     </header>
                     <div class="body text-center text-muted mt-3">
                         <p class="m-0"><b>احمد رمزي</b></p>
