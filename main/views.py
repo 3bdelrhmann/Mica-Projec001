@@ -76,10 +76,16 @@ def HomePage(request):
 
 
 def symptoms(request):
-    context = {}
+    context = {
+     'title' : ' الأعراض',
+
+    }
     return render(request, 'main/symptoms.html', context)
 
 
 def about(request):
-    context = {}
+    context = {
+        'title' : ' اِحنا مين',
+
+    }
     return render(request, 'main/about.html', context)

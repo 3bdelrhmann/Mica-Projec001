@@ -8,6 +8,7 @@ def all_doctors(request):
     queryset = VoltDoctors.objects.all()
     context = {
         'doctors': queryset,
+        'title' : 'إستشير طبيب',
     }
 
     return render(request, 'doctors_app/doctors.html', context)
@@ -22,6 +23,7 @@ def volteneer_doctors(request):
             return redirect('doctors:all')
     context = {
         'form': form,
+        'title' : ' تطوع معنا',
     }
 
     return render(request, 'doctors_app/doctorform.html', context)

@@ -46,16 +46,20 @@
                             </a>
                             <a href="{% url 'main:symptoms' %}">
                                 <li>اعراض الفيروس</li>
-                            </a>
-                            <a href="{% url 'emergency:all_numbers' %}">
-                                <li>أرقام الطواريئ</li>
-                            </a>
+                                <a>
+                                    <a href="#"> 
+                                       <li> كلم مساعدك الشخصي</li> 
+                                  </a>
 
                         </ul>
                         <ul class="col-sm-6 col-12">
                             <a href="{% url 'doctors:volteneer' %}">
-                                <li>التطوع لفريق الأطباء</li>
+                                <li>تطوع لفريق الأطباء</li>
                             </a>
+                        </a>
+                        <a href="{% url 'emergency:all_numbers' %}">
+                            <li>أرقام الطواريئ</li>
+                        </a>
                             <a href="{% url 'doctors:all' %}">
                                 <li>إستشير طبيب</li>
                             </a>
@@ -65,6 +69,8 @@
                             <a href="{% url 'main:about' %}">
                                 <li>إحنا مين</li>
                             </a>
+                          
+                           
                         </ul>
                     </div>
                 </div>

@@ -12,8 +12,4 @@ class LabsView(ListView):
     context_object_name = 'labs'
     paginate_by = 1
     queryset = Labs.objects.all()
-
-
-def labs(request):
-
-    return render(request, 'labs_app/labs.html')
+    title = 'تست'

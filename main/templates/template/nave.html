@@ -15,16 +15,18 @@
 <div class="overlay" id="overlay">
     <nav class="overlay-menu">
         <ul class="col-sm-3">
-            <li><a href="./index.html">الصفحة الرئيسية</a></li>
-            <li><a href="./symptoms.html">الاعراض</a></li>
-            <li><a href="./index.html#protection">طرق الوقاية</a></li>
-            <li><a href="./PlacesOfLabs1.html">اماكن التحاليل</a></li>
+            <li><a href="{% url 'home:main' %}">الصفحة الرئيسية</a></li>
+            <li><a href="#"> كلم مساعدك الشخصي</a></li> 
+            <li><a href="{% url 'main:symptoms' %}">الاعراض</a></li>
+            <li><a href="{% url 'emergency:all_numbers' %}">ارقام الطوارئ</a></li>
+            <li><a href="{% url 'labs:all' %}">اماكن التحاليل</a></li>
         </ul>
         <ul class="col-sm-3">
-            <li><a href="./volunteerDoctors.html">إستشير طبيب</a></li>
-            <li><a href="./volunteerDoctorForm.html">تطوع لفريق الاطباء</a></li>
-            <li><a href="./donations.html">تبرع الان</a></li>
-            <li><a href="./index.html#party1">اعلي الدول اصابه </a></li>
+            <li><a href="{% url 'doctors:all' %}">إستشير طبيب</a></li>
+            <li><a href="{% url 'doctors:volteneer' %}">تطوع لفريق الاطباء</a></li>
+            <li><a href="{% url 'donation:organization' %}">دعم المئسسات الخيرية</a></li>
+            <li><a href="{% url 'donation:peoples' %}">دعم العماله اليومية </a></li>
+            <li><a href="{% url 'main:about' %}">اِحنا مين </a></li>
         </ul>
     </nav>
 </div>

@@ -7,6 +7,8 @@ def organizations(request):
     queryset = OrganizationsDonation.objects.all()
     conext = {
         'orgs': queryset,
+     'title' : ' دعم الؤسسات  الخيرية',
+
     }
     return render(request, 'donation_app/org.html', conext)
 
@@ -16,6 +18,8 @@ def people_donation(request):
 
     conext = {
         'peoples': queryset,
+             'title' : ' دعم العماله اليومية',
+
     }
 
     return render(request, 'donation_app/peoples.html', conext)
