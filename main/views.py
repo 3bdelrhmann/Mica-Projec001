@@ -28,7 +28,7 @@ def HomePage(request):
             new_confirmed=data['stats']['newlyConfirmedCases'],
             new_recovered=data['stats']['newlyRecoveredCases'],
             new_deaths=data['stats']['newDeaths'],
-
+            counter=1,
         )
         create_obj.save()
         totalCases = data['stats']['totalConfirmedCases']
@@ -49,6 +49,7 @@ def HomePage(request):
             get_stats.new_confirmed = data['stats']['newlyConfirmedCases']
             get_stats.new_recovered = data['stats']['newlyRecoveredCases']
             get_stats.new_deaths = data['stats']['newDeaths']
+            get_stats.counter += 1
             get_stats.save()
 
         totalCases = get_stats.total_cases
@@ -57,14 +58,14 @@ def HomePage(request):
         new_confirmed = get_stats.new_confirmed
         new_recovered = get_stats.new_recovered
         new_deaths = get_stats.new_deaths
-    if get_stats.last_update.strftime('%p') == 'am':
+    if get_stats.last_update.strftime('%p') == 'AM':
         period = 'صباحًا'
     context = {
         'new_confirmed': new_confirmed,
         'new_recovered': new_recovered,
         'new_deaths': new_deaths,
         'period': period,
-        'today': today,
+        'last_update': get_stats.last_update,
         'totalCases': totalCases,
         'totalRecovered': totalRecovered,
         'totalDeaths': totalDeaths,
@@ -77,3 +78,8 @@ def HomePage(request):
 def symptoms(request):
     context = {}
     return render(request, 'main/symptoms.html', context)
+
+
+def about(request):
+    context = {}
+    return render(request, 'main/about.html', context)

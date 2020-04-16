@@ -20,6 +20,8 @@ class CovidStats(models.Model):
     new_recovered = models.IntegerField()
     new_deaths = models.IntegerField()
 
+    counter = models.IntegerField()
+
     last_update = models.DateTimeField(auto_now=True)
 
     def __str__(self):

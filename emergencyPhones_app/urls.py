@@ -3,5 +3,5 @@ from .views import emergency_numbers
 app_name = 'emergencyPhones_app'
 
 urlpatterns = [
-    path('', emergency_numbers),
+    path('', emergency_numbers, name='all_numbers'),
 ]

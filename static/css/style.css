@@ -2,6 +2,9 @@
     font-family: 'Cairo', sans-serif;
     direction: rtl;
 }
+html{
+      scroll-behavior: smooth;
+}
 .card-body p {
     line-height: 2.0;
 }
@@ -118,7 +121,7 @@ header.topHeader .logo img{
   background: #FFF;
 }
 .button_container span {
-  background: #293179;
+  background: #0984e3;
   border: none;
   height: 5px;
   width: 100%;
@@ -127,6 +130,9 @@ header.topHeader .logo img{
   left: 0;
   transition: all .35s ease;
   cursor: pointer;
+}
+.button_container h4 b{
+  color: #0984e3;
 }
 .button_container span:nth-of-type(2) {
   top: 11px;
@@ -137,7 +143,7 @@ header.topHeader .logo img{
 
 .overlay {
   position: fixed;
-  background: rgba(15,36,70,.9);
+  background:#1565c0e6;
   top: 0;
   left: 0;
   bottom:0;
@@ -301,116 +307,140 @@ header.topHeader .logo img{
 }
 /*activities*/
 
-/*Targets Mostqbal Watan*/
-section.targets{
-  margin: 30px 0 ;
-  text-align: right;
-  background: #ffffff;
-  padding: 7px 0;
-  overflow: hidden;
+/*protections */
 
-}
-section header h1:after{
-  content: '';
-  position: absolute;
-  width: 200px;
-  display: block;
-  right: 21%;
-  height: 5px;
-  background-color: #002e66;
-  border-radius: 20px 0px;
-  margin-top: 4px;
-}
-.targets .our-targets{
-  margin-top: 19px;
-  overflow: hidden;
-}
-.targets .our-targets > div{
+.protection-ways .protections > div{
   padding: 10px 5px
 }
-.targets .our-targets .Target-right{
-  background: #1565c0
-;
+.protection-ways .protections .protection-right{
+  text-align: right;
+  background: #1565c0;
   float: right;
   display: block;
   border-left:4px solid #e8e8e8;
   border-right: 4px solid #e8e8e8;
 }
-.targets .our-targets .Target-left{
+.protection-ways .protections .protection-left{
+  text-align: right;
   background: #1565c0  ;
   float: left;
   display: block;
   border:4px solid #e8e8e8;
 }
-.targets .our-targets h6{
+.protection-ways .protections h6{
   color: #fff;
 }
-.targets .our-targets article{
+.protection-ways .protections article{
   color: #ddd;
   padding-right: 4px;
-}
-/*Targets Mostqbal Watan*/
-
-/*Mostaqbal watan*/
-.party .header {
-  padding: 25px 0;
-}
-.party .leaders .Thfirst{
-  margin-bottom: 25px
-}
-.party .about-mostqbal h3{
-  color: #fff
-}
-.party .about-mostqbal p{
-  border-right: 5px solid rgb(15, 36, 70);
-  padding-right: 8px;
-  margin-right: 14px;
-  line-height: 2;
-}
-.party .leaders{
-  overflow: hidden;
-
-  
-
-}
-
-.party .leaders .Thfirst img{
-    height: 250px;
-    width: 250px;
-    box-shadow: 3px 3px 14px #ddd;
-    margin-bottom: 8px;
-}
-.party .leaders  img{
-    border-radius: 50%;
-}
-.party .leaders .Thsecond{
-  margin-bottom: 25px;
-}
-.party .leaders .Thsecond img{
-  width: 200px;
-}
-.party .leaders .Ththirt,.party .leaders .Thsecond{
-  overflow: hidden;
-}
-.party .leaders .Ththirt img{
-  width: 180px;
-}
-footer .social  a{
-  font-size: xx-large;
-}
-.width-auto {
-    width: auto;
-}
-
-.text-lg {
-    font-size: 2rem;
 }
 
 .carousel-indicators li {
     border: none;
     background: #ccc;
 }
+.ToTop{
+  background-color: #3b325f;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out;
+  border-top: 1px solid #3b325f;
+  border-bottom: 1px solid #3b325f;
+}
 
-.carousel-indicators li.active {
-    background: #28a745;
+.ToTop:hover{
+  background-color: #fff;
+  color: #3b325f;
+}
+.ToTop:hover h6 i{
+  color: #3b325f;
+}
+.ToTop:hover h6{
+  color: #3b325f;
+}
+footer a{
+  text-decoration: none !important;
+}
+.carousel-control-prev.width-auto, .carousel-control-next{
+  font-size: 34px
+}
+footer .sitemap ul a{
+  display: block;
+  margin-bottom: 25px;
+}
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.facebook .fab {
+  color: #3b5998;
+}
+.social-btns .btn.website:before {
+  background-color: #3b325f;
+}
+.social-btns .btn.website .fab {
+  color: #3b325f;
+}
+.social-btns .btn.google:before {
+  background-color: #dc4a38;
+}
+.social-btns .btn.google .fab {
+  color: #dc4a38;
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fab,
+.social-btns .btn:hover .fas {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.footer{
+  background-color: #ecf0f1;
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
 }

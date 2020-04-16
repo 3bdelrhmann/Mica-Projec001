@@ -1,5 +1,6 @@
 {% extends 'template/base.html' %}
-{% block content%}
+{% load static %}
+{% block content %}
 <div class="M-counter">
     <div class="container">
         <div class="row mt-4 mb-4">
@@ -46,21 +47,20 @@
                 </div>
             </div>
             <div class="col-12 text-right last_update">
-                <span>اخر تحديث : {{today|date:'d-m-Y'}} || {{today|date:'h:i'}} {{period}}</span>
+                <span>اخر تحديث : {{last_update|date:'d-m-Y'}} || {{last_update|date:'h:i'}} {{period}}</span>
             </div>
         </div>
     </div>
 </div>
 
-
-<section class="targets col-sm-12 pt-3 pb-3 ">
+<section class="protection-ways col-sm-12 pt-3 pb-3 ">
     <div class="container">
         <header id="protection" class="text-center pb-3">
             <h3><b>طرق الوقايه</b></h3>
             <h6 class="text-muted">ساعد على وقف انتشار فيروس كورونا</h6>
         </header>
-        <div class="our-targets">
-            <div class="Target-right mr-3 col-md-6 col-sm-12 p-4 d-block">
+        <div class="protections overflow-hidden mt-3">
+            <div class="protection-right mr-3 col-md-6 col-sm-12 p-4 d-block">
                 <h6><b>إغسل اليدين بانتظام</b></h6>
                 <article>
                     <p>
@@ -69,7 +69,7 @@
                     </p>
                 </article>
             </div>
-            <div class="Target-left col-md-6 col-sm-12 p-4">
+            <div class="protection-left col-md-6 col-sm-12 p-4">
                 <h6><b>تجنب لمس عينيك وأنفك وفمك</b></h6>
 
                 <article>
@@ -79,7 +79,7 @@
                         بالمرض</p>
                 </article>
             </div>
-            <div class="Target-right col-md-7 col-sm-12 p-4">
+            <div class="protection-right col-md-7 col-sm-12 p-4">
                 <h6><b>تجنب الاقتراب كثيرا من الناس</b></h6>
 
                 <article>
@@ -90,7 +90,7 @@
                     </p>
                 </article>
             </div>
-            <div class="Target-left col-md-6 col-sm-12 p-4">
+            <div class="protection-left col-md-6 col-sm-12 p-4">
                 <h6><b>تجنب المصافحة</b></h6>
                 <article>
                     <p>
@@ -98,7 +98,7 @@
                         عن بعد أو بالإيماءة أو بالإنحناءة بدلا من ‏المصافحة</p>
                 </article>
             </div>
-            <div class="Target-right col-md-7 col-sm-12 p-4">
+            <div class="protection-right col-md-7 col-sm-12 p-4">
                 <h6><b>تابع المستجدات واتبع نصائح مقدمي الرعاية الصحية</b></h6>
 
                 <article>
@@ -108,7 +108,7 @@
                         والآخرين من الإصابة بعدوى كوفيد-19 .</p>
                 </article>
             </div>
-            <div class="Target-left col-md-6 col-sm-12 p-4">
+            <div class="protection-left col-md-6 col-sm-12 p-4">
                 <h6><b>احرص على ممارسات النظافة التنفسية</b></h6>
                 <article>
                     <p>
@@ -120,57 +120,49 @@
         </div>
     </div>
 </section>
-<section class="pb-5 bg-white border-top pt-5">
+<section class="bg-white border-top pt-5 pb-5">
     <div class="container">
         <div class="row">
+            <header class="d-block col-12 text-center pb-4">
+                <h4><b><i class="fa fa-quote-right ml-3 text-dark"></i>تجنب</b></h4>
+            </header>
             <div class="col-lg-10 col-xl-8 mx-auto">
                 <div class="p-5 bg-white shadow rounded">
                     <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
-                        <ol class="carousel-indicators mb-0">
-                            <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-
-
                         <!-- Bootstrap inner [slides]-->
                         <div class="carousel-inner px-5 pb-4">
                             <!-- Carousel slide-->
                             <div class="carousel-item active">
-                                <div class="media">
-                                    <div class="media-body ml-3">
-                                        <blockquote class="blockquote border-0 p-0 text-right">
-                                            <p class="font-italic lead"> <i
-                                                    class="fa fa-quote-right ml-3 text-dark"></i>هناك حقيقة مثبتة منذ
-                                                زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ</p>
-
+                                <div class="media"><img class="rounded-circle img-thumbnail ml-4 d-none d-sm-block"
+                                        src="{% static 'images/man.png' %}" alt="" style='height:75px;' width="75">
+                                    <div class="media-body mt-4">
+                                        <blockquote class="blockquote border-0 p-0 text-center">
+                                            <p class="font-italic lead">الأستماع للشائعات
+                                                المندلعة حول المرض<i class="fa fa-quote-left mr-3 text-dark"></i></p>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Carousel slide-->
                             <div class="carousel-item">
-                                <div class="media">
-                                    <div class="media-body ml-3">
-                                        <blockquote class="blockquote border-0 p-0 text-right">
-                                            <p class="font-italic lead"> <i
-                                                    class="fa fa-quote-right ml-3 text-dark"></i>هناك حقيقة مثبتة منذ
-                                                زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ</p>
-
+                                <div class="media"><img class="rounded-circle img-thumbnail ml-4 d-none d-sm-block"
+                                        src="{% static 'images/BarberToolsr.png' %}" alt="" style='height:75px;'
+                                        width="75">
+                                    <div class="media-body mt-4">
+                                        <blockquote class="blockquote border-0 p-0 text-center">
+                                            <p class="font-italic lead"> مشاركة الأدوات الشخصية
+                                                <i class="fa fa-quote-left mr-3 text-dark"></i></p>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Carousel slide-->
                             <div class="carousel-item">
-                                <div class="media">
-                                    <div class="media-body ml-3">
-                                        <blockquote class="blockquote border-0 p-0 text-right">
-                                            <p class="font-italic lead"> <i
-                                                    class="fa fa-quote-right ml-3 text-dark"></i>هناك حقيقة مثبتة منذ
-                                                زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ</p>
+                                <div class="media"><img class="rounded-circle img-thumbnail ml-4 d-none d-sm-block"
+                                        src="{% static 'images/Isolation.png' %}" alt="" style='height:75px;'
+                                        width="75">
+                                    <div class="media-body mt-4 ">
+                                        <blockquote class="blockquote border-0 p-0 text-center">
+                                            <p class="font-italic lead">التواجد في الأماكن
+                                                المزدحمة <i class="fa fa-quote-left mr-3 text-dark"></i></p>
 
                                         </blockquote>
                                     </div>
